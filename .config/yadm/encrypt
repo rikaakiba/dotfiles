@@ -1,0 +1,4 @@
+.ssh/id_*
+.ssh/config
+.config/rclone/rclone.conf
+.kube/config
