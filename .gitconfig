@@ -1,0 +1,12 @@
+[user]
+	email = perfectt93@gmail.com
+	name = akibarika
+
+[pull]
+  ff = only
+
+[ghq]
+  root = ~/gits
+
+[include]
+  path = ~/.gitconfig.local

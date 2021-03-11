@@ -14,7 +14,7 @@ source ~/.config/fish/alias.fish
 source ~/.config/fish/plugins.fish
 
 ### Set vi keybindings
-fish_vi_key_bindings
+# fish_vi_key_bindings
 
 # Prompt
 type -q starship && starship init fish | source
@@ -24,8 +24,12 @@ type -q starship && starship init fish | source
 ### Key Bindings
 # Bind for peco history to Ctrl+r
 function fish_user_key_bindings
-  bind \cr peco_select_history
+  bind \cr 'peco_select_history (commandline -b)'
+  bind \ck 'peco_kill'
+  # fish_vi_key_bindings --no-erase
 end
+
+fish_user_key_bindings
 
 ### iTerm2 integration
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
