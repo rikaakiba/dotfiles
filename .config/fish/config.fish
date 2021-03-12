@@ -4,7 +4,7 @@ export GPG_TTY=(tty)
 
 ### Load extra path
 [ -e ~/.extra_path ] && cat ~/.extra_path | while read -l pl
-  set -g fish_user_paths $pl $fish_user_paths
+  set -g fish_user_paths (echo "$pl" | sed -E "s|\~|$HOME|g") $fish_user_paths
 end
 
 ### Load aliases
