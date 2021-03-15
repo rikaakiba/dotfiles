@@ -60,6 +60,7 @@ brew "redis", restart_service: true
 brew "ripgrep"
 brew "speedtest-cli"
 brew "starship"
+brew "terminal-notifier"
 brew "tmux"
 brew "tokei"
 brew "vim"
