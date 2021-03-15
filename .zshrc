@@ -221,7 +221,7 @@ if ! test -e "$HOME/.zshrc.local"; then
     fi
 fi
 
-source .zshrc.local
+source ~/.zshrc.local
 
 # zprof
 # if (which zprof > /dev/null) ;then
