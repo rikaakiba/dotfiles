@@ -55,6 +55,9 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'michaeljsmith/vim-indent-object'
 
+[[plugins]]
+repo = 'tpope/vim-surround'
+
 # Color schemes
 [[plugins]]
 repo = 'wadackel/vim-dogrun'
