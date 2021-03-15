@@ -49,6 +49,12 @@ repo = 'roxma/vim-hug-neovim-rpc'
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-jedi'
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'michaeljsmith/vim-indent-object'
+
 # Color schemes
 [[plugins]]
 repo = 'wadackel/vim-dogrun'
@@ -75,5 +81,3 @@ hook_add = '''
   let g:ale_lint_on_text_changed = 'never'
 '''
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
