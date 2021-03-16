@@ -1,3 +1,9 @@
 [[plugins]]
-repo = 'davidhalter/jedi-vim'
-for = 'python'
+repo = 'Shougo/deoplete.nvim'
+on_if = 'has("python3")'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+'''
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-jedi'
