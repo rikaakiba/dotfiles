@@ -3,7 +3,7 @@ export LANG=ja_JP.UTF-8
 export GPG_TTY=(tty)
 
 ### Colorful terminal
-TERM=xterm-256color
+export TERM=xterm-256color
 
 ### Load extra path
 [ -e ~/.extra_path ] && cat ~/.extra_path | while read -l pl
