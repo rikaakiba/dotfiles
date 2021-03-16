@@ -2,6 +2,9 @@
 export LANG=ja_JP.UTF-8
 export GPG_TTY=(tty)
 
+### Colorful terminal
+TERM=xterm-256color
+
 ### Load extra path
 [ -e ~/.extra_path ] && cat ~/.extra_path | while read -l pl
   set -g fish_user_paths (echo "$pl" | sed -E "s|\~|$HOME|g") $fish_user_paths
