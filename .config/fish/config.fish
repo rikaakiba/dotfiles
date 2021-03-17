@@ -34,6 +34,9 @@ end
 
 fish_user_key_bindings
 
+# Package & Env managers
+source ~/.config/fish/env.fish
+
 ### iTerm2 integration
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
