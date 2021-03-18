@@ -4,4 +4,4 @@ if test -x /home/linuxbrew/.linuxbrew/bin/brew
 end
 
 # Go
-command -v go && set -x PATH (go env GOPATH)/bin $PATH && set -x GOPATH (go env GOPATH)
+command -qv go && set -x PATH (go env GOPATH)/bin $PATH && set -x GOPATH (go env GOPATH)
