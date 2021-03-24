@@ -266,3 +266,5 @@ fi
 
 # Syntax highlighting
 zinit light zsh-users/zsh-syntax-highlighting
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

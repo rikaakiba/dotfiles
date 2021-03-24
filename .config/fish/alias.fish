@@ -1,3 +1,7 @@
+# abbreviations
+abbr -a g git
+abbr -a k kubectl
+
 # Replace apps with better alternatives
 type -q exa && alias ls=exa
 type -q rg && alias grep=rg

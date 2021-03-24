@@ -27,7 +27,7 @@ type -q starship && starship init fish | source
 ### Key Bindings
 # Bind for peco history to Ctrl+r
 function fish_user_key_bindings
-  bind \cr 'peco_select_history (commandline -b)'
+  type -q fzf_key_bindings && fzf_key_bindings || bind \cr 'peco_select_history (commandline -b)'
   bind \ck 'peco_kill'
   # fish_vi_key_bindings --no-erase
 end
