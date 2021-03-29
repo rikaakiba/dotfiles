@@ -5,3 +5,9 @@ end
 
 # Go
 command -qv go && set -x PATH (go env GOPATH)/bin $PATH && set -x GOPATH (go env GOPATH)
+
+# Rust (rustup)
+if test -d ~/.cargo
+  set -x CARGO_HOME $HOME/.cargo
+  set -x PATH $CARGO_HOME/bin $PATH
+end
