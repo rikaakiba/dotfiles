@@ -30,6 +30,7 @@ function fish_user_key_bindings
   type -q fzf_key_bindings && fzf_key_bindings || bind \cr 'peco_select_history (commandline -b)'
   bind \ck 'peco_kill'
   # fish_vi_key_bindings --no-erase
+  bind \ef forward-word
 end
 
 fish_user_key_bindings
