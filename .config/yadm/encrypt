@@ -1,4 +1,6 @@
 .ssh/id_*
 .ssh/config
 .config/rclone/rclone.conf
+.config/tableplus/Connections.plist
+.config/tableplus/ConnectionGroups.plist
 .kube/config
