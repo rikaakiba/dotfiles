@@ -27,6 +27,7 @@ brew "gifsicle"
 brew "git"
 brew "fzf"
 brew "ghq"
+brew "gpg"
 # brew "gradle"
 brew "htop"
 # brew "libusbmuxd", args: ["HEAD"]
