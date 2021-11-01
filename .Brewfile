@@ -1,7 +1,7 @@
 cask_args appdir: '/Applications'
 
 # tap
-tap "azure/functions"
+# tap "azure/functions"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -74,7 +74,7 @@ brew "yamllint"
 brew "yarn"
 brew "zsh"
 brew "zsh-completions"
-brew "azure/functions/azure-functions-core-tools@3"
+# brew "azure/functions/azure-functions-core-tools@3"
 brew "mistertea/et/et"
 
 # cask
