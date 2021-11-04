@@ -10,3 +10,5 @@
 
 [include]
   path = ~/.gitconfig.local
+[core]
+	editor = nvim
