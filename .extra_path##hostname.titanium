@@ -3,4 +3,5 @@
 /opt/homebrew/sbin
 ~/.local/bin
 /opt/homebrew/opt/ruby@2.6/bin
-
+/opt/homebrew/opt/mysql@5.7/bin
+/opt/homebrew/opt/mysql-client/bin
