@@ -1,6 +1,9 @@
 # homebrew
 if test -x /opt/homebrew/bin/brew
   eval (/opt/homebrew/bin/brew shellenv)
+  if test -x /usr/local/bin/brew
+    alias ibrew="arch -x86_64 /usr/local/bin/brew"
+  end
 end
 
 # Linux homebrew
@@ -15,4 +18,12 @@ command -qv go && set -x PATH (go env GOPATH)/bin $PATH && set -x GOPATH (go env
 if test -d ~/.cargo
   set -x CARGO_HOME $HOME/.cargo
   set -x PATH $CARGO_HOME/bin $PATH
+end
+
+# pyenv
+if command -qv pyenv
+  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  status is-login; and pyenv init --path | source
+  status is-interactive; and pyenv init - | source
 end
