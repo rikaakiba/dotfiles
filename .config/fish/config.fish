@@ -38,6 +38,9 @@ fish_user_key_bindings
 # Package & Env managers
 source ~/.config/fish/env.fish
 
+# Load local configurations
+[ -e ~/.config/fish/config.fish.local ] && source ~/.config/fish/config.fish.local
+
 ### iTerm2 integration
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
