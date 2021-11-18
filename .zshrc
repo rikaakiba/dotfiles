@@ -214,14 +214,17 @@ test -e "$HOME/.jenv" && export PATH="$HOME/.jenv/bin:$PATH"
 if ! test -e "$HOME/.zshrc.local"; then
     # Powerline
     # powerline-daemon called in .zprofile
-    POWERLINE_PACKAGE_INFO=$(pip3 show powerline-status)
+    POWERLINE_PACKAGE_INFO=$(pip3 show powerline-status 2>/dev/null) 
     if [ $? -eq 0 ]; then
         POWERLINE_SCRIPT_PATH=$(echo ${POWERLINE_PACKAGE_INFO} | grep Location | sed -E "s/^Location: (.+)$/\1/g")
         echo "${POWERLINE_SCRIPT_PATH}/powerline/bindings/zsh/powerline.zsh" > ~/.zshrc.local
     fi
 fi
 
-source ~/.zshrc.local
+if [ -e ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
+
 
 # zprof
 # if (which zprof > /dev/null) ;then
@@ -233,7 +236,7 @@ source ~/.zshrc.local
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.zinit/bin" && \
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
@@ -245,10 +248,10 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
+    zdharma-continuum/z-a-rust \
+    zdharma-continuum/z-a-as-monitor \
+    zdharma-continuum/z-a-patch-dl \
+    zdharma-continuum/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
 zinit light qoomon/zsh-lazyload
