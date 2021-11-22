@@ -12,4 +12,8 @@ if not type -q bat and type -q batcat
 end
 
 # Replace vim with neovim if possible
-type -q nvim && alias vim=nvim
+# Also set default editor to neovim
+type -q nvim && alias vim=nvim && set EDITOR /usr/bin/nvim
+
+# Always run virsh with --connect qemu:///system
+type -q virsh && alias virsh="virsh --connect qemu:///system"
