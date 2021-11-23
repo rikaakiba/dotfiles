@@ -1,2 +1,4 @@
 brew "mysql@5.7"
 brew "mysql-connector-c"
+
+cask "zoom"
