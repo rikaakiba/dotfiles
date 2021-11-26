@@ -11,6 +11,8 @@ plugins=(git ssh-agent)
 # 環境変数
 export LANG=ja_JP.UTF-8
 export DYLD_LIBRARY_PATH=/usr/local/opt/openssl/lib:$DYLD_LIBRARY_PATH
+# Load session env for KDE Plasma
+[ -e ~/.config/plasma-workspace/env/env.sh ] && source ~/.config/plasma-workspace/env/env.sh
 source ~/.environment
 
 # Load extra paths

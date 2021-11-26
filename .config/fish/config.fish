@@ -38,6 +38,9 @@ fish_user_key_bindings
 # Package & Env managers
 source ~/.config/fish/env.fish
 
+# Load session env for KDE Plasma
+[ -e ~/.config/plasma-workspace/env/env.sh ] && source ~/.config/plasma-workspace/env/env.sh
+
 # Load local configurations
 [ -e ~/.config/fish/config.fish.local ] && source ~/.config/fish/config.fish.local
 
