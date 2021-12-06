@@ -12,18 +12,18 @@ if test -x /home/linuxbrew/.linuxbrew/bin/brew
 end
 
 # Go
-command -qv go && set -x PATH (go env GOPATH)/bin $PATH && set -x GOPATH (go env GOPATH)
+command -qv go && fish_add_path (go env GOPATH)/bin && set -x GOPATH (go env GOPATH)
 
 # Rust (rustup)
 if test -d ~/.cargo
   set -x CARGO_HOME $HOME/.cargo
-  set -x PATH $CARGO_HOME/bin $PATH
+  fish_add_path $CARGO_HOME/bin
 end
 
 # pyenv
 if command -qv pyenv
   set -Ux PYENV_ROOT $HOME/.pyenv
-  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  fish_add_path $PYENV_ROOT/bin
   status is-login; and pyenv init --path | source
   status is-interactive; and pyenv init - | source
 end
