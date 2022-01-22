@@ -3,8 +3,14 @@ abbr -a g git
 abbr -a k kubectl
 
 # Replace apps with better alternatives
-type -q exa && alias ls=exa --icons
+type -q exa && alias ls=exa
 type -q rg && alias grep=rg
+
+# Aliases for ls
+if type -q exa
+  alias ll="ls -lh --icons"
+end
+alias lla="ll -a"
 
 # bat is installed as "batcat" on debian distros, create a symlink for consistency
 if not type -q bat and type -q batcat
