@@ -3,7 +3,7 @@ abbr -a g git
 abbr -a k kubectl
 
 # Replace apps with better alternatives
-type -q exa && alias ls=exa
+type -q exa && alias ls="exa --icons"
 type -q rg && alias grep=rg
 
 # Aliases for ls
