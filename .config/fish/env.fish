@@ -27,3 +27,10 @@ if command -qv pyenv
   status is-login; and pyenv init --path | source
   status is-interactive; and pyenv init - | source
 end
+
+# Volta(node)
+if command -qv volta
+  set -x VOLTA_HOME "$HOME/.volta"
+  set -x PATH "$VOLTA_HOME/bin" $PATH
+end
+

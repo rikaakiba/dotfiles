@@ -203,8 +203,6 @@ esac
 
 # volta:  https://volta.sh/
 # volta completions zsh > /usr/local/share/zsh/site-functions/_volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH":
 
 # iTerm2 Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -273,3 +271,5 @@ fi
 zinit light zsh-users/zsh-syntax-highlighting
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
