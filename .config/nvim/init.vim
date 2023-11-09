@@ -113,5 +113,7 @@ command! Jqf %!jq '.'
 set pastetoggle=<F2>
 
 " Filetypes
+let g:vim_json_conceal=0
+
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
