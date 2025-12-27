@@ -5,10 +5,19 @@ export GPG_TTY=(tty)
 ### Colorful terminal
 export TERM=xterm-256color
 
+### Linux - fcitx5
+# set -x GTK_IM_MODULE fcitx5
+# set -x QT_IM_MODULE fcitx5
+# set -x SDL_IM_MODULE fcitx5
+set -x XMODIFIERS "@im=fcitx5"
+
 ### Load extra path
 [ -e ~/.extra_path ] && cat ~/.extra_path | while read -l pl
   fish_add_path (echo "$pl" | sed -E "s|\~|$HOME|g")
 end
+
+### CachyOS
+source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 ### Load aliases
 source ~/.config/fish/alias.fish
