@@ -5,3 +5,4 @@
 .config/tableplus/Connections.plist
 .config/tableplus/ConnectionGroups.plist
 .kube/config
+.cache/huggingface/token
