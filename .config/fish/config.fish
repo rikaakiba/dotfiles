@@ -17,7 +17,7 @@ set -x XMODIFIERS "@im=fcitx5"
 end
 
 ### CachyOS
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+[ -e /usr/share/cachyos-fish-config/cachyos-config.fish ] && source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 ### Load aliases
 source ~/.config/fish/alias.fish
