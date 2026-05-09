@@ -12,7 +12,7 @@ let g:rc_dir = expand('~/.config/nvim')
 
 " automatic installation of dein.vim
 if !isdirectory(s:dein_repo_dir)
-  execute '!git clone <https://github.com/Shougo/dein.vim>' s:dein_repo_dir
+  execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 endif
 execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 
